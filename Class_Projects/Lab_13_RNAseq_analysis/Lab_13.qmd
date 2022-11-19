@@ -1,0 +1,280 @@
+---
+title: "LAB_13"
+author: "RUNQI ZHANG"
+format: pdf
+toc: TRUE
+---
+
+# Section 1. Differential Expression Analysis
+
+library
+```{r}
+library(DESeq2)
+```
+
+load files
+```{r}
+metaFile <- "data/GSE37704_metadata.csv"
+countFile <- "data/GSE37704_featurecounts.csv"
+
+# Import metadata and take a peak
+colData = read.csv(metaFile, row.names=1)
+head(colData)
+```
+
+```{r}
+# Import countdata
+countData = read.csv(countFile, row.names=1)
+head(countData)
+```
+
+## Q. Complete the code below to remove the troublesome first column from countData
+```{r}
+# Note we need to remove the odd first $length col
+countData <- as.matrix(countData[,-1])
+head(countData)
+```
+
+## Q. Complete the code below to filter countData to exclude genes (i.e. rows) where we have 0 read count across all samples (i.e. columns).
+Tip: What will rowSums() of countData return and how could you use it in this context?
+```{r}
+# Filter count data where you have 0 read count across all samples.
+
+countData = countData[rowSums(countData)>0, ]
+head(countData)
+
+sum(rowSums(countData)==0)
+```
+
+## Running DESeq2
+```{r}
+dds = DESeqDataSetFromMatrix(countData=countData,
+                             colData=colData,
+                             design=~condition)
+dds = DESeq(dds)
+```
+```{r}
+res = results(dds, contrast=c("condition", "hoxa1_kd", "control_sirna"))
+```
+
+```{r}
+#summary(res)
+```
+
+## Volcono plot
+```{r}
+#Codes for Enhanced Volcano Plot
+
+#library(EnhancedVolcano)
+#x <- as.data.frame(res)
+#
+#EnhancedVolcano(x,
+#    lab = x$symbol,
+#    x = 'log2FoldChange',
+#    y = 'pvalue')
+```
+
+```{r}
+plot( res$log2FoldChange, -log(res$padj) )
+
+# Make a color vector for all genes
+mycols <- rep("gray", nrow(res) )
+# Color red the genes with absolute fold change above 2
+mycols[ abs(res$log2FoldChange) > 2 ] <- "red"
+
+# Color blue those with adjusted p-value less than 0.01
+#  and absolute fold change more than 2
+inds <- ( res$padj < 0.01 ) & (abs(res$log2FoldChange) > 2 )
+mycols[ inds ] <- "blue"
+
+plot( res$log2FoldChange, -log(res$padj), col=mycols, xlab="Log2(FoldChange)", ylab="-Log(P-value)" )
+
+#cut-off lines
+abline(v=c(-2,2), col="gray", lty=2)
+abline(h=-log(0.1), col="gray", lty=2)
+```
+
+## Adding gene annotation
+```{r}
+# first install the library in console
+# BiocManager::install(c("AnnotationDbi", "org.Hs.eg.db"))
+library("AnnotationDbi")
+library("org.Hs.eg.db")
+
+columns(org.Hs.eg.db)
+
+res$symbol <- mapIds(org.Hs.eg.db,
+                     keys=row.names(res),
+                     column="SYMBOL",
+                     keytype="ENSEMBL",
+                     multiVals="first")
+
+res$entrez <- mapIds(org.Hs.eg.db,
+                     keys=row.names(res),
+                     column="ENTREZID",
+                     keytype="ENSEMBL",
+                     multiVals="first")
+
+res$name <- mapIds(org.Hs.eg.db,
+                     keys=row.names(res),
+                     column="GENENAME",
+                     keytype="ENSEMBL",
+                     multiVals="first")
+
+head(res)
+```
+## Q. Finally for this section let's reorder these results by adjusted p-value and save them to a CSV file in your current project directory.
+```{r}
+res = res[order(res$pvalue),]
+write.csv(res, file="deseq_results.csv")
+```
+
+
+# Section 2. Pathway Analysis
+```{r}
+# Run in your R console (i.e. not your Rmarkdown doc!)
+#BiocManager::install( c("pathview", "gage", "gageData") )
+
+# For old vesrsions of R only (R < 3.5.0)!
+#source("http://bioconductor.org/biocLite.R")
+#biocLite( c("pathview", "gage", "gageData") )
+```
+
+load packages
+```{r}
+library(pathview)
+```
+
+```{r}
+library(gage)
+library(gageData)
+
+data(kegg.sets.hs)
+data(sigmet.idx.hs)
+
+# Focus on signaling and metabolic pathways only
+kegg.sets.hs = kegg.sets.hs[sigmet.idx.hs]
+
+# Examine the first 3 pathways
+head(kegg.sets.hs, 3)
+```
+
+The main gage() function requires a named vector of fold changes, where the names of the values are the Entrez gene IDs.
+
+Note that we used the mapIDs() function above to obtain Entrez gene IDs (stored in res$entrez) and we have the fold change results from DESeq2 analysis (stored in res$log2FoldChange).
+
+```{r}
+foldchanges = res$log2FoldChange
+names(foldchanges) = res$entrez
+head(foldchanges)
+```
+
+run the gage pathway analysis
+```{r}
+# Get the results
+keggres = gage(foldchanges, gsets=kegg.sets.hs)
+```
+
+```{r}
+attributes(keggres)
+```
+```{r}
+# Look at the first few down (less) pathways
+head(keggres$less)
+```
+
+```{r}
+pathview(gene.data=foldchanges, pathway.id="hsa04110")
+```
+![](hsa04110.pathview.png)
+
+```{r}
+# A different PDF based output of the same data
+pathview(gene.data=foldchanges, pathway.id="hsa04110", kegg.native=FALSE)
+```
+
+see files
+```{r}
+## Focus on top 5 upregulated pathways here for demo purposes only
+keggrespathways <- rownames(keggres$greater)[1:5]
+
+# Extract the 8 character long IDs part of each string
+keggresids = substr(keggrespathways, start=1, stop=8)
+keggresids
+## KEGG pathways
+
+#pathview(gene.data=foldchanges, pathway.id=keggresids, species="hsa")
+```
+![](hsa04640.pathview.png)
+![](hsa04630.pathview.png)
+![](hsa00140.pathview.png)
+![](hsa04142.pathview.png)
+![](hsa04330.pathview.png)
+
+## Q. Can you do the same procedure as above to plot the pathview figures for the top 5 down-reguled pathways?
+```{r}
+## Focus on top 5 upregulated pathways here for demo purposes only
+keggrespathways <- rownames(keggres$less)[1:5]
+
+# Extract the 8 character long IDs part of each string
+keggresids = substr(keggrespathways, start=1, stop=8)
+keggresids
+## KEGG pathways
+
+#pathview(gene.data=foldchanges, pathway.id=keggresids, species="hsa")
+```
+![](hsa04110.pathview.png)
+![](hsa03030.pathview.png)
+![](hsa03013.pathview.png)
+![](hsa03440.pathview.png)
+![](hsa04114.pathview.png)
+
+
+# Section 3. Gene Ontology (GO
+```{r}
+data(go.sets.hs)
+data(go.subs.hs)
+
+# Focus on Biological Process subset of GO
+gobpsets = go.sets.hs[go.subs.hs$BP]
+
+gobpres = gage(foldchanges, gsets=gobpsets, same.dir=TRUE)
+
+lapply(gobpres, head)
+```
+
+
+# Section 4. Reactome Analysis
+Reactome is database consisting of biological molecules and their relation to pathways and processes. Reactome, such as many other tools, has an online software available (https://reactome.org/) and R package available (https://bioconductor.org/packages/release/bioc/html/ReactomePA.html).
+
+First, Using R, output the list of significant genes at the 0.05 level as a plain text file:
+```{r}
+sig_genes <- res[ (res$padj <= 0.05 & !is.na(res$padj) ), "symbol"]
+
+print(paste("Total number of significant genes:", length(sig_genes)))
+```
+"Total number of significant genes: 8147"
+
+```{r}
+write.table(sig_genes, file="significant_genes.txt", row.names=FALSE, col.names=FALSE, quote=FALSE)
+```
+Then, to perform pathway analysis online go to the Reactome website *https://reactome.org/PathwayBrowser/#TOOL=AT*. Select "choose file" to upload your significant gene list. Then, select the parameters "Project to Humans", then click "Analyze".
+![](Reactome_Results/PathwaysOverview.png)
+## Q: What pathway has the most significant "Entities p-value"? Do the most significant pathways listed match your previous KEGG results? What factors could cause differences between the two methods?
+![](Reactome_Results/Screenshot.png)
+The *Endosomal/Vacuolar pathway* has the most significant entities p-value. The other method returned the *homophilic cell adhesion pathway* as the most significant. Both KEGG and Reactome covers same number of genes (example for human ~7000). KEGG is a collection of biological information compiled from published material a curated database, where as REACTOME is a open source and open access pathway database (*credit to: https://reactome.org/docs/training/Pathways_&_Networks_Overview.pdf*, Nov. 8, 2022).
+
+# Section 5. GO online (OPTIONAL)
+Gene Set Gene Ontology (GO) Enrichment is a method to determine over-represented or under-represented GO terms for a given set of genes. GO terms are formal structured controlled vocabularies (ontologies) for gene products in terms of their biological function. The goal of this analysis is to determine the biological process the given set of genes are associated with.
+
+To perform Gene Set GO Enrichment online go to the website http://www.geneontology.org/page/go-enrichment-analysis. Paste your significant gene list from section 4. Then, select "biological process" and "homo sapiens", and click submit.
+
+##Q: What pathway has the most significant “Entities p-value”? Do the most significant pathways listed match your previous KEGG results? What factors could cause differences between the two methods?
+
+
+# Session Information
+The sessionInfo() prints version information about R and any attached packages. It's a good practice to always run this command at the end of your R session and record it for the sake of reproducibility in the future.
+```{r}
+sessionInfo()
+```
+

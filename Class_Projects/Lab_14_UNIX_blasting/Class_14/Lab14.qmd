@@ -1,0 +1,34 @@
+---
+title: "Lab14"
+author: "Runqi Zhang"
+format: pdf
+toc: TRUE
+---
+```{r}
+# read tsv file using read.table()
+df <- read.table("mm-second.x.zebrafish.tsv")
+
+# set column names
+colnames(df) <- c("qseqid", "sseqid", "pident", "length", "mismatch", "gapopen", "qstart", "qend", "sstart", "send", "evalue", "bitscore")
+```
+
+Make a histogram of the $bitscore values. You may want to set the optional breaks to be a larger number (e.g. breaks=30).
+```{r}
+hist(df$bitscore, breaks=30)
+```
+Is there a straightforward relationship between percent identity ($pident) and bitscore ($bitscore) for the alignments we generated?
+```{r}
+cor(df$pident, df$bitscore)
+```
+```{r}
+# create a ggplot
+library(ggplot2)
+ggplot(df, aes(pident, bitscore))+
+    geom_point(alpha=0.1)
+```
+```{r}
+ggplot(df, aes((df$pident * (df$qend - df$qstart)), bitscore))+
+    geom_point(alpha=0.1)+
+    geom_smooth()
+```
+

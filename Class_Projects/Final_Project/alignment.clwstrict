@@ -1,0 +1,508 @@
+CLUSTAL W (1.81) multiple sequence alignment
+
+Fruitfly                  ------------------------------------------------------------
+Coral_snake               ------------------------------------------------------------
+E_coli                    ------------------------------------------------------------
+African_frog              ------------------------------------------------------------
+Human                     MASQFCLPESPCLSPLKPLKPHFGDIQEGIYAAIQRSDKRIHLAVVTEINRENYWVTVEW
+Chinese_salamander        MNVNENKPLAAVKAVSRLPVPSTVRPKRSRSSENMPLIEKKRIRISSPEQHAVRRSVPAS
+Wall_lizard               ------------------------------------------------------------
+Viviparous_lizard         ------------------------------------------------------------
+Mouse                     ------------------------------------------------------------
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  ------------------------------------------------------------
+Coral_snake               -------------------------------------------------MYDNMST----
+E_coli                    ------------------------------------------------------------
+African_frog              ---------------------------------------MVLTGPPQRESVSMVKR----
+Human                     VEKAVKKGKKIDLETILLLNPALDSAEHPMPPLPLSPLALAPSSAIRDQRTVTKWV----
+Chinese_salamander        IATTRPKPPVVAALPRTYLAGRASLAPVRHNPPAHVPSAPAVSRRPAPPPTSALKTGPPT
+Wall_lizard               ------------------------------------------------------------
+Viviparous_lizard         ------------------------------------------------------------
+Mouse                     ------------------------------------------------------------
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                -----------------------------------------------------MAT----
+                                                                                      
+
+Fruitfly                  -------------------------------------------------------MTQMS
+Coral_snake               -----------------------------------------------MVYLKEDKLEKLT
+E_coli                    -------------------------------------------------------MDFTY
+African_frog              -----------------------------------------------ASMLDQHKKSSCA
+Human                     -----------------------------------------------AMIPQKNQTASGD
+Chinese_salamander        AATACTSKKRAPWDLKGQMDDMRDKVSTYKGKVQDLAGENVHLRQTLEQMQSQLALAGAE
+Wall_lizard               --------------------------------------------------------MSDT
+Viviparous_lizard         --------------------------------------------------------MSGA
+Mouse                     ----------------------------------------------------MSKLKSSE
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                -----------------------------------------------QNLMSAKKEEKGK
+                                                                                      
+
+Fruitfly                  QDEIITNTKTVLQG---------------------------LEALRVEHVSIMN------
+Coral_snake               QDEIISKTKQVIQG---------------------------LEALKNEHNSILQ------
+E_coli                    KVKMRHQWRPGVGG-----------------------------------FVDLN------
+African_frog              RVRVAVRLRPYMEE----KE---------------------EDKVPTACVRGLD------
+Human                     SLDVRVPSKPCLMK----QKKSPCLWEIQKLQEQREKRRRLQQEIRARRALDVNTRNPNY
+Chinese_salamander        SKELNAKCRTLEAELQTTQQKLEQVLQDAAALRTTVRSQEEQLSIHTHTIAELQEAKCSL
+Wall_lizard               KVKVAVRVRPMNRR---------------------------ELELNTKCIVEME------
+Viviparous_lizard         SVKVAVRVRPFNSR---------------------------ETGKDSKCIIQMQ------
+Mouse                     SVRVVVRCRPMNGK---------------------------EKAASYDKVVDVD------
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                NIQVVVRCRPFNMA---------------------------ERKVNSHSVLECE------
+                                                                                      
+
+Fruitfly                  ------------------------------------------------------------
+Coral_snake               ------------------------------------------------------------
+E_coli                    ------------------------------------------------------------
+African_frog              ------------------------------------------------------------
+Human                     EIMHMIEEYRRHLDSSKISVLEPPQEHRICVCVRKRPLNQRETTLKDLDII---------
+Chinese_salamander        TELVGSTEVKLKLADDELSIKRVLAQSLQTEVVSLQEEGVGKDERLHNLEMERRRLHNII
+Wall_lizard               ------------------------------------------------------------
+Viviparous_lizard         ------------------------------------------------------------
+Mouse                     ------------------------------------------------------------
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  -------------------------------------------------GIAEVQKD---
+Coral_snake               -------------------------------------SLLETLKCLKKDDETNLV-----
+E_coli                    ------------------------------------------------CGW--------Y
+African_frog              ------------------------------------------SHSLEIVNWRNQLETMQY
+Human                     --------------------------------TVPSDNVVMVHESKQKVDLTRYLQNQTF
+Chinese_salamander        QELKGNIRVFCRVRPLLKSEDSFCMDHIHFPQQDNKSVVLSKTEESHTGRERKEAHKYDF
+Wall_lizard               ---------------------------------GNQTVLHPPPSNNKQGENRKSPKV--F
+Viviparous_lizard         ---------------------------------------GNSTSILNPKNPKEAPKS--F
+Mouse                     ------------------------------------VKLGQVSVKNPKGTSHEMPKT--F
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                --------------------------------------PARKEVAVRIAGINEKLGKKTY
+                                                                                      
+
+Fruitfly                  -----------------NEKSDMLRKNIENI----------------ELGLSEAQVMMAL
+Coral_snake               -----------------EEKSNMIRKSLEML----------------ELGLSEAQVMMAL
+E_coli                    CQDALLGWY--------CKKHN--------------------------------------
+African_frog              QFDAFYGDS--------ASQREIYMGSVCHILPHLLIGQNASVFAYGPTGAGKTHTMLGN
+Human                     CFDHAFDDK--------ASNELVYQFTAQPLVESIFRKGMATCFAYGQTRSGKTYTVGGD
+Chinese_salamander        TFDRVFSPE--------SCQDEVFHE-ISLLVQSALDGYHVCIFAYGQTGSGKTYTMEGP
+Wall_lizard               AFDYCFWSMDESNTAKYAGQQVVFKCLGEGILEKAFQGYNACIFAYGQTGSGKSFSMMGN
+Viviparous_lizard         SFDYSYWSHTSPDDPCFASQNRVYNDIGKEMLLHAFEGYNVCIFAYGQTGAGKSYTMMGK
+Mouse                     TFDAVYDWN--------AKQFELYDETFRPLVDSVLQGFNGTIFAYGQTGTGKTYTMEGV
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                TFDMVFGPQ--------AKQIDVYRSVVCPILDEVIMGYNCTVFAYGQTGTGKTFTMEGE
+                                                                                      
+
+Fruitfly                  TSHLQNIEAEKHKLKTQVRRLHQENAWL----RDELANTQQKFQASEQLVAQLEEEKKHL
+Coral_snake               SNHLNAVESEKQKLRAQVRRLCQENQWL----RDELANTQQKLQKSEQSVAQLEEEKKHL
+E_coli                    --------------------------------MSDIKAKRNRLSFGFSPEDSYCYEIK--
+African_frog              PDQ-----------PGVIPRAVRELLQMTRMAASAPENENWTHTITMSYVEIYQEKVMDL
+Human                     FSGTAQ-----DCSKGIYALVAQDVFLL----LRNSTYEKLDLKVYGTFFEIYGGKVYDL
+Chinese_salamander        DDVDSET-------MGMIPRAVRQVFES----AEELTAKGWHYTFTANFLEIYNETIRDL
+Wall_lizard               AEQ-----------LGLIPRLCCALFQR----ITSEENDSHTFKVEVSYMEIYNEKVRDL
+Viviparous_lizard         QEENQ---------AGIIPQLCEELFEK----INDNSNEEISYSVEVSYMEIYCERVRDL
+Mouse                     RGDPEK--------RGVIPNSFDHIFTH------ISRSQNQQYLVRASYLEIYQEEIRDL
+Firebelly_salamander      -APDGEFTWDEDPLAGIIPRTLHQIFEK-------LSENGTEFSVKVSLLEIYNEELFDL
+Caecilians                RSPDAEFTWEEDPLAGIIPRTLHQIFEK-------LSENGTEFSVKVSLLEIYNEELFDL
+                                                                                      
+
+Fruitfly                  EFMASVKKYDEN-QEQDDA--CDKSRTDPVVELFPDEENEDRH-NMSPTPPSQFANQTSG
+Coral_snake               EFMNQLKKYDDDISPSEDK--DADSAKEPLDDLFPNDEDDQGQGIQQPHSSAAAAAQQGG
+E_coli                    --------IPCDIQRYKQALLKHGPIIVS-GKLGMADFG-----LLGGVN----------
+African_frog              --LEP---KNKDLPIREDK--DHNILIPGVTLKTINSFGDFDA-HFIPASQNRTVASTKL
+Human                     --LN----WKKKLQVLEDG--NQQIQVVGLQEKEVCCVEEVLN-LVEIGNSCRTSRQTSV
+Chinese_salamander        --LVSKPEKNVEYEIKRVSPTSDELHVTNLRYVSVSSEQEVHK-LLRTAKTNRSVAKTIL
+Wall_lizard               --LDP-KGSRQSLKVREHK--VLGPYVDGLSQLAVTSFEDIES-LMSEGNKSRTVAATNM
+Viviparous_lizard         --LN--PKNKGNLRVREHP--LLGPYVEDLSKLAVTSYTDIAD-LMDAGNKARTVAATNM
+Mouse                     --LS--KDQTKRLELKERP--DTGVYVKDLSSFVTKSVKEIEH-VMNVGNQNRSVGATNM
+Firebelly_salamander      --LSPCPDVNERLQMFDDPRNKRGVIIKGLEEVTVHNKNEVYQ-ILERGAAKRTTASTLM
+Caecilians                --LSPSPDVNERLQMFEDPRNKRGVIIKGLEEITVHNKDEVYH-ILERGAAKRTTASTLM
+                                                                                      
+
+Fruitfly                  YEIPARLRTLHNLVIQYASQGRYE--VAVPLCKQALEDLERTSG------------HDHP
+Coral_snake               YEIPARLRTLHNLVIQYASQGRYE--VAVPLCKQALEDLEKTSG------------HDHP
+E_coli                    -------HYVLIVSVDT------------KRGKITIQDPLNIN--FGIPGYSGCRIYD--
+African_frog              NDRSSRSHAVLLIKVQKSQQVAP---FRQLIGKLYLIDLAGSED-NRRTGNQGIRLKESG
+Human                     NAHSSRSHAVFQIILKS---------GGIMHGKFSLVDLAGNERGADTTKASRKRQLEGA
+Chinese_salamander        NDRSSRSHSVFQLKIEGRNETR----DVKTLSTLSLIDLAGSER-LDKSLSKGDRLRETQ
+Wall_lizard               NEESSRSHAVFNIIVTQTLYDLQSGNSGEKVSKVSLVDLAGSER-VSKTGAAGERLKEGS
+Viviparous_lizard         NETSSRSHAVFTIVFTQKKHDLETDLSTEKVSKISLVDLAGSER-ADSTGAKGTRLKEGA
+Mouse                     NEHSSRSHAIFVITIECSEVGLDGE-NHIRVGKLNLVDLAGSER-QAKTGAQGERLKEAT
+Firebelly_salamander      NAYSSRSHSVFSVTIHMKETTVDGE-ELVKXGKLNLVXLAGSEN-IGRSGAVDKRAREAG
+Caecilians                NAYSSRSHSVFSVTIHMKETTLDGE-ELVKIGKLNLVDLAGSEN-IGRSGAVDKRAREAG
+                                 . :  : .                 .  :      .              :  
+
+Fruitfly                  DVATMLNILALVYRDQNK------------YKEA--ANLLNDA-LSIRGKT--LGENHPA
+Coral_snake               DVATMLNILALVYRDQNK------------YKDA--ANLLNDA-LAIREKT--LGKDHPA
+E_coli                    -----------------------------------------------------FYSVAP-
+African_frog              AINSSLFTLSKVVDALNQ------GLPRIPYRDSKLTRLLQDS-LGGSAHSVMITNIAPE
+Human                     EINKSLLALKECILALGQ------NKPHTPFRASKLALVLRDSFIGQNSSTCMIATISPG
+Chinese_salamander        AINTSLSNLGLVITSLSN------KDSHIPYRNSKLTYLLQNS-LGGNSKVLMFVNVSPL
+Wall_lizard               NINKSLSTLGLVISSLADQAAGKGKNKFVPYRDSVLTWLLKDN-LGGNSQTAMIATISPA
+Viviparous_lizard         NINKSLTTLGKVISALAEVSKKKKKTDFIPYRDSVLTWLLREN-LGGNSRTAMVAALSPA
+Mouse                     KINLSLSALGNVISALVD-----GKSTHIPYRDSKLTRLLQDS-LGGNAKTVMVANVGPA
+Firebelly_salamander      NINQSLLTLGRVITALXE------RTPHIPYRXSKLTRILQXS-LGXXTKTSIIATXSPA
+Caecilians                NINQSLLTLGRVITALVE------RAPHIPYRESKLTRILQDS-LGGRTKTSIIATVSPA
+                                                                               .    * 
+
+Fruitfly                  VAATLNNLAVL-YGKRGKY-KDAEPLCKRALEIR-EKVLGKDHPDVAKQLNNLALLC---
+Coral_snake               VAATLNNLAVL-YGKRGKY-KEAEPLCKRALEIR-EKVLGKDHPDVAKQLNNLALLC---
+E_coli                    --KIEETLVVNEY--KLAY-FRCK------------------------------------
+African_frog              QTYYFDTLTALNFAAKSKQ-IINKPFSRETTQTVAQPAMKRPREEAEATTSSRQRKK---
+Human                     MTSCENTLNTLRYANRVKK-LN----VDVRPYHRGHYPIGHEAPRMLKSHIGNSEMS---
+Chinese_salamander        DENFSESLNSLRFASKVNECVIGTAQANRR------------------------------
+Wall_lizard               ADNYEETLSTLRYADRAKR-IVNHAIVNEDPNARVIRELREEVEKLKEQLSQAEAMK---
+Viviparous_lizard         DINYDETLSTLRYADRAKQ-IKCNAVINEDPNAKLVRELKEEVTRLKDLLRAQGLGDIID
+Mouse                     SYNVEETLTTLRYANRAKN-IKNKPRVNEDPKDALLREFQEEIARLKAQLEKRSIGR---
+Firebelly_salamander      SINXEETLSTLXYAYRAKN-IMNK------------------------------------
+Caecilians                SINMEETLSTLEYAHRAKN-IMNKPEVNQKLTKRALITVSCVVSCVHIFSNSVQ------
+                               :.*    :  .                                            
+
+Fruitfly                  --------------------QNQGKYDEVEKYYQRALDIYESKLGPDDPNVAKTKNNLAG
+Coral_snake               --------------------QNQGKYEEVEYYYQRALEIYQTKLGPDDPNVAKTKNNLAS
+E_coli                    ------------------------------------------------------------
+African_frog              ---------------------------SKTDSTESSPNSSMESTGKRKLNLASLDSAVVE
+Human                     --------------------LQRDEFIKIPYVQSEEQKEIEEVETLPTLLGKDTTISGKG
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               ------------------------------------APELKEKLEESEKLIKELTVTWEE
+Viviparous_lizard         TSMGSLTASPSSCSLSSQVGLTSVSSIQERIMSTPGGEEAIERLKESEKIIAELNETWEE
+Mouse                     --------------------RKRREKRREGGGSGGGGEEEEEEGEEGEEDGDDKDDYWRE
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  CYLKQGRYTEAEILYK--------------------------------------------
+Coral_snake               CYLKQGKFKQAETLYK--------------------------------------------
+E_coli                    ------------------------------------------------------------
+African_frog              RLLKLDKILTEKGKKEA-------------------------------------------
+Human                     SSQWLENIQERAG-----------------------------------------------
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               KLRKTEEIAQERQRQLESMGISLETSGIKVG----EDKCYLVNLNADPALNELLVYYLKD
+Viviparous_lizard         KLRKTEAIRMEREALLAEMGVAIREDGGTLGVFSPKKTPHLVNLNEDPLMSECLLYYIKD
+Mouse                     QQEKLE------------------------------------------------------
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  ----------------QVLTRAHEREFGAIDSKN--------------------------
+Coral_snake               ----------------EILTRAHEREFGSVDDEN--------------------------
+E_coli                    ------------------------------------------------------------
+African_frog              ----------------QLLSTPKRERMALLKKWEE-------------------------
+Human                     -------------------GVHHDIDFCIARS----------------------------
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               HT----RVGADTSQDIQLFGIGIQPEHCEIDIAP----DGEVSLSPKENARSCVNGTLVC
+Viviparous_lizard         GITRVGQADAERRQDIVLSGAHIKEEHCIFRSERNHNGDVIVTLEPGERSETYVNGKRVV
+Mouse                     -----------------IEKRAIVEDHSLVAE----------------------------
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  ------------------------------------------------------------
+Coral_snake               ------------------------------------------------------------
+E_coli                    ------------------------------------------------------------
+African_frog              ------------------------------------------------------------
+Human                     ------------------------------------------------------------
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               SVTQLWHGDRILWGNNHFFRINLPKRKRRDWLKDSEKEQQLAEHDLDAASEASSEPDYNY
+Viviparous_lizard         QSVQLRSGNRIIMGKNHVFRFNHPEQARAEREKTPSAETPSEPVDWTFAQRELLEKQGID
+Mouse                     ------------------------------------------------------------
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  ----------------------KPIWQVAEEREEHKFDNRENTPYGEYGGWHKAAKVDSP
+Coral_snake               ----------------------KPIWMHAEEREECKGKQKDGMTFGEYGGWYKACKVDSP
+E_coli                    ------------------------------------------------------------
+African_frog              ----------------------SQMEIERLKEKQKELEQKAMEAEARLEKSNNSDLSDSS
+Human                     ----------------------------------LSILEQKIDALTEIQKKLKLLLADLH
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               EFAQMEVIMKTLNSNDPVQNVVQVLEKQYLEEKRSALEEQRMMYERELEQLRQQLSPERR
+Viviparous_lizard         MKQEMEKRLQEM----------EILYKKEKEEADLLLEQQRLDYESKLQALQKQVETRSL
+Mouse                     ----------------------EKMRLLKEKEKKMEDLRREKDAAEMLGAKIKAMESKLL
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  TVTTTL------------------------------------------------------
+Coral_snake               TVTTTL------------------------------------------------------
+E_coli                    ------------------------------------------------------------
+African_frog              VSENTFRA----------------------------------------------------
+Human                     VKSKVE------------------------------------------------------
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               FQHSSDRLSEAAQTAQQKVNLWSEERDELF--------RQSLAKLREQIVKANTLVREAN
+Viviparous_lizard         AAETTE-----EEEEEEEEVPWTQHEYELAQWAFRKWKFHQFTSLRDQLWGNAVYLKEGN
+Mouse                     VGGKNIVDHTNEQQKILEQ-----------------------------------------
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  -------------------------------KNLGALYRRQGMFEAAETLEDCAMRSKKE
+Coral_snake               -------------------------------KNLGALYRRQGKFEAAETLEEAAMRSRKQ
+E_coli                    ------------------------------------------------------------
+African_frog              ----------------------------PLRGRNTSTAKAKKVLRVLPMQGNSQLQSTIE
+Human                     ------------------------------------------------------------
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               LLAEEMSKLTDYQVTL------------QIPAANLSANRKRGAIVSEPAIQVRR-KGKST
+Viviparous_lizard         AISVELKKKVQFQFVLLTDTLYSPLPPELLPPESEKTRDNRPFPRTVVAVEVQDLKNGAT
+Mouse                     ----------------------------KRQEIAEQKRREREIQQQMESRDEETLELKET
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  AYDLAKQTKLSQLLTSNEKRRSKAIKEDLDFSEEKNAKP---------------------
+Coral_snake               GLDNVHKQKVAEVLNDPESIERRQSRESLNIDVVKYESGPD-------------------
+E_coli                    ------------------------------------------------------------
+African_frog              EGIPVFEKKKKKQVTCDGHENQPTWEMNMRTDLLESGKER--------------------
+Human                     ------------------------------------------------------------
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               QVWTIEKLENKLIDMRDLYQE---WKERAHEMRRLTGKRGDPFYEAQENHNLIGVANVFL
+Viviparous_lizard         HYWSLEKLKQRLELMREMYDRAGEMASNTQEDSESTMTGSDPFYDRFHWFKLVGSSPIFH
+Mouse                     YTSLQQEVDIKTKKLKKLFSKLQAVKAEIHDLQEEHIKERQELEQTQ-------------
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  ------------------------------------------------------------
+Coral_snake               ------------------------------------------------------------
+E_coli                    ------------------------------------------------------------
+African_frog              ------------------------------------------------------------
+Human                     ------------------------------------------------------------
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               ECLFCDVKLQYAVPIISQQGEVAGRLHVEVMRVTGVVPERLVEGDDSSENSSESGSIEIM
+Viviparous_lizard         GCVNERLADRTPSPTFSTADSDITELADEQQDEMEDFDDEAFVDDTGSDAGTEEGSDLFN
+Mouse                     ------------------------------------------------------------
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  ------------------------------------------------------------
+Coral_snake               ------------------------------------------------------------
+E_coli                    ------------------------------------------------------------
+African_frog              ------------------------------------------------------------
+Human                     ------------------------------------------------------------
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               DNNGEITHRPKRLTCRVKIKEATGLPLNLSNFVFCQYTFWDQCESTVAAPVVDPDVPSPL
+Viviparous_lizard         DGHDPFYDRSPW-------------------FILVGRAFVYLSNLLYPVPLIHRVAVVSE
+Mouse                     ------------------------------------------------------------
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  ------------------------------------------------------------
+Coral_snake               -------------------------------GGEEVSMSLEWNGDGTGSLKRSGSFSKLR
+E_coli                    ------------------------------------------------------------
+African_frog              ---------------------------------ILKLLNTGSVKELKSLQRIGDKKAKLI
+Human                     ------------------------------------------------------------
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               TKDVQFTVTFAHCKDYVVNVTEEFLEFIQDGALAIEVWGHRCAGNGSSIWEVDTLHAKTR
+Viviparous_lizard         KGEVRGFLRVAVQAIAADEEAPDYGSGVRQSGTAKISFDNEYFNKSNFTSVAMTRSGLSL
+Mouse                     -------------------------------------------NELTRELKLKHLIIENF
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  ------------------------------------------------------------
+Coral_snake               ASIRRSSEKLVRKLKGGSSRESPGMKRASSMNILNVGGKTTEDHFQGRT-----------
+E_coli                    ------------------------------------------------------------
+African_frog              IGWREVNGLFKNVEELECLEGISAKQVSSFIKANILSSISS-------------------
+Human                     ------------------------------------------------------------
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               TLRDRWNEVTRRIEMWVSIQELNELGDYTAVELHQAKDVNTGGIFQLRQEEDLNCVRERW
+Viviparous_lizard         EELRIVEGQGQSSEGITPPEEINRMNEMDLKSGSLLDGKMAMEGFTEEVGDHLKL-----
+Mouse                     IPLEEKNKIMNRSFFDDEEDHWKLHPITRLENQQMMKRPVSAVGYKRPLSQHARM-----
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  ------------------------------------------------------------
+Coral_snake               ------------------------------------------------------------
+E_coli                    ------------------------------------------------------------
+African_frog              ------------------------------------------------------------
+Human                     ------------------------------------------------------------
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               SEALIKRREYLDEQIKKISNKQDKTDDDMEREARLVEQWVGLTEERNAVLVPAPDSGIPG
+Viviparous_lizard         ------------GSVFTFRVTVLQASGILPEYADIFCQFNFLHRHDEAFSTEPLKNNGRG
+Mouse                     ------------------------------------------------------------
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  ------------------------------------------------------------
+Coral_snake               ------------------------------------------------------------
+E_coli                    ------------------------------------------------------------
+African_frog              ------------------------------------------------------------
+Human                     ------------------------------------------------------------
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               APANWIPPSGMETHIPVLFLDLNADDLSANEQLIGPQASGVNSILPKEHGSQFFYLPIIK
+Viviparous_lizard         APLGFYHVQNISVEVTESFVEYIKTKPIVFEVFGHYQQHPLHLQGQDLNSPR--------
+Mouse                     ------------------------------------------------------------
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  ------------------------------------------------------------
+Coral_snake               ------------------------------------------------------------
+E_coli                    ------------------------------------------------------------
+African_frog              ------------------------------------------------------------
+Human                     ------------------------------------------------------------
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               HSKDEVSATAAWDPSVHDSVHLNRVTPQNERIYLIVKITVQLSHPAAMELVLRKRIAANI
+Viviparous_lizard         ---------------------------QPSRRYFPPPMPLSKPVPATKLNTVSKPSLGQS
+Mouse                     ------------------------------------------------------------
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  ------------------------------------------------------------
+Coral_snake               ------------------------------------------------------------
+E_coli                    ------------------------------------------------------------
+African_frog              ------------------------------------------------------------
+Human                     ------------------------------------------------------------
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               YNKQSFTQSLKRRISLKNIWYACGVAYEIVSNIPKATEEIEDRETLALMAARNENEGASD
+Viviparous_lizard         MTKYDLL-----------VWFEISELEPTGEYIPAIVDHTAGLPCQGTFLLHQGIQRRIT
+Mouse                     ------------------------------------------------------------
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  ------------------------------------------------------------
+Coral_snake               ------------------------------------------------------------
+E_coli                    ------------------------------------------------------------
+African_frog              ------------------------------------------------------------
+Human                     ------------------------------------------------------------
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               GETYIEKYTRGVLQVENILSLERLRQAVTVKEAISTKTRHMQRSVSTPNVHNVSCSRLDI
+Viviparous_lizard         VTIIHEKGNELHWKDVRELVVGRIRNKAEVDEAAVD-------AILSLNIISAKYLRTSH
+Mouse                     ------------------------------------------------------------
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  ------------------------------------------------------------
+Coral_snake               ------------------------------------------------------------
+E_coli                    ------------------------------------------------------------
+African_frog              ------------------------------------------------------------
+Human                     ------------------------------------------------------------
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               SGCDEDKGWSEGHLDVLDCSSSYQDVSCYGTLPRDSPRRSKDAGGSVSENPHASTVSPFK
+Viviparous_lizard         SSNRTFYRFEAVWDSSLHNSLLLNRVTPYGEKIYMTLSAYLELDHCIQPAVITKDVCMVF
+Mouse                     ------------------------------------------------------------
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  ------------------------------------------------------------
+Coral_snake               ------------------------------------------------------------
+E_coli                    ------------------------------------------------------------
+African_frog              ------------------------------------------------------------
+Human                     ------------------------------------------------------------
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               AFSPQPPKFFKPLMPVKEEHKKISFESRPLLSKESMPSSQVHSAGCVVPSGSNASSMPVE
+Viviparous_lizard         YSRDAKISPPRSLRSLFGSGYSKSPDSNRVTGIYELSLCKMADTGSPGMQRRRRKVLDTS
+Mouse                     ------------------------------------------------------------
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  ------------------------------------------------------------
+Coral_snake               ------------------------------------------------------------
+E_coli                    ------------------------------------------------------------
+African_frog              ------------------------------------------------------------
+Human                     ------------------------------------------------------------
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               HNSIHEENIQDSEDDDELEAINKKPYVPEEFADFSVYNASLENREWLSSKGDFVNSRVVE
+Viviparous_lizard         VAYVRGEENLAGWRPRGDSLILEHQWELEKLELLHEVEKTRHFLLLREKLGDSIPKSLSD
+Mouse                     -------------------------------------------SMMIRPEPRYRAENIML
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  ------------------------------------------------------------
+Coral_snake               ---------------------------NCLTDSRAKSVSHTDLAH---------------
+E_coli                    ------------------------------------------------------------
+African_frog              ------------------------------------------------------------
+Human                     ------------------------------------------------------------
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               KEVSRSPTTSSITSGYFSHSASNATLSDMLVPCSDSTDQLANQMRDLDSNDHSVAHLTHD
+Viviparous_lizard         SLSPSLSSGTLSTSTSISSQISSTTFESAVTPSESSGYDSADIESLVDREKELATKCLQL
+Mouse                     LELDMPSRTTRDYEGPAISPKVQAALDAALQDEDEIQVDASSFESTASRKPKARPKSGRK
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  ------------------------------------------------------------
+Coral_snake               ------------------------------------------------------------
+E_coli                    ------------------------------------------------------------
+African_frog              ------------------------------------------------------------
+Human                     ------------------------------------------------------------
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               LRPS-NKETSEPERDLAKYKVLMSPVKENSALAAEVPMYESTTTIPTQLQCTGLDSSANK
+Viviparous_lizard         LTHTFNREFNQVYNSISDCKLSDISPIGRDPSVSSFSSATLTPSSTCPSLSDSRCNSVDQ
+Mouse                     SGSSSSSSGNPASQFYPQSRGLVPK-----------------------------------
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  ------------------------------------------------------------
+Coral_snake               ------------------------------------------------------------
+E_coli                    ------------------------------------------------------------
+African_frog              ------------------------------------------------------------
+Human                     ------------------------------------------------------------
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               NTPHGIEFPFREATVEHTSNVFEDHAFTEFMGAEDAKELECSVGPQFCSSSSSNQKKKVS
+Viviparous_lizard         KTP-------------------------------EANSRASSPGPEGEPPFQLIPPIEAS
+Mouse                     ------------------------------------------------------------
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  ------------------------------------------------------------
+Coral_snake               ------------------------------------------------------------
+E_coli                    ------------------------------------------------------------
+African_frog              ------------------------------------------------------------
+Human                     ------------------------------------------------------------
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               TAGTNCASGFSDNIYNQDNPLSHLQSAPVGYQRSNSTENPSLSVRIKEASYCQMYADSFL
+Viviparous_lizard         YLARAGKNEFLNLVPDIEEIRPGSVVSKKGYLNFKEPLSPSWAKHFVVVRRPYVFIYNSD
+Mouse                     ------------------------------------------------------------
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  ------------------------------------------------------------
+Coral_snake               ------------------------------------------------------------
+E_coli                    ------------------------------------------------------------
+African_frog              ------------------------------------------------------------
+Human                     ------------------------------------------------------------
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               ADDFIGKNHLNVSHCEDVTSEEHPSWMEVGEQVYIGSNKPGIVRYVGPVDFSSGTWVGIE
+Viviparous_lizard         KD---------------------------------------------PIERGILNLSTAQ
+Mouse                     ------------------------------------------------------------
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  ------------------------------------------------------------
+Coral_snake               ------------------------------------------------------------
+E_coli                    ------------------------------------------------------------
+African_frog              ------------------------------------------------------------
+Human                     ------------------------------------------------------------
+Chinese_salamander        ------------------------------------------------------------
+Wall_lizard               LHFQTGKHDGTVKGREYFRCKPRHGIFVRPECVTKTPAPTKICSSSSRSQVSSTMDTRKS
+Viviparous_lizard         VEYSEDQEAMVKTPNTFAVCTRHRGVLLQAINDKDMNDWLYAFNPLLAGTIRSKLARRRS
+Mouse                     ------------------------------------------------------------
+Firebelly_salamander      ------------------------------------------------------------
+Caecilians                ------------------------------------------------------------
+                                                                                      
+
+Fruitfly                  ---------------------------------------
+Coral_snake               ---------------------------------------
+E_coli                    ---------------------------------------
+African_frog              ---------------------------------------
+Human                     ---------------------------------------
+Chinese_salamander        ---------------------------------------
+Wall_lizard               SVLQKAPSSKAEAESFCQSGDAAASAFSRKQEIRKSWIN
+Viviparous_lizard         GQLKY----------------------------------
+Mouse                     ---------------------------------------
+Firebelly_salamander      ---------------------------------------
+Caecilians                ---------------------------------------
+                                                                 

@@ -1,0 +1,76 @@
+---
+title: "class05"
+author: "RUNQI ZHANG"
+format: pdf
+---
+
+# Our first ggplot
+
+To use the ggplot2 package I first need to have it installed on my computer. (.)(.)
+
+1. use the 'install.packages()' command.
+
+ggplot is not loaded by defaul to save disk space. To manually load the package,
+
+2. use 'library(ggplot2)' to load the ggplot2 package
+```{r}
+library(ggplot2)
+
+ggplot(mpg) +
+  aes(displ, hwy) +
+  geom_point()
+```
+
+I can add more layers:
+```{r}
+ggplot(mpg) +
+  aes(displ, hwy) +
+  geom_point() +
+  geom_smooth(se=0)
+```
+# Plot of gene expression data
+
+First read the data from online.
+```{r}
+url <- "https://bioboot.github.io/bimm143_S20/class-material/up_down_expression.txt"
+genes <- read.delim(url)
+View(genes)
+```
+
+
+```{r}
+p <- ggplot(genes) +
+      aes(Condition1, Condition2, color=State) +
+      geom_point() +
+      geom_smooth()
+
+p
+```
+Q: How mnay genes are in the dataset
+```{r}
+nrow(genes)
+```
+
+Q: How many genes are up/downregulated or unchanged?
+
+```{r}
+table(genes$State)
+```
+Q: Using your values above and 2 significant figures. What fraction of total genes is up-regulated in this dataset?
+```{r}
+round(table(genes$State)/nrow(genes)*100, 2)
+```
+# Further implementation to ggplot
+
+```{r}
+p <- ggplot(genes) +
+      aes(Condition1, Condition2, color=State) +
+      geom_point(alpha=.3) +
+      scale_color_manual(values=c("blue","gray","red")) +
+      labs(title="Gene Expression Changes Upon Drug Treatment",
+           subtitle="Condition 1 VS. Condition 2",
+           caption="By Runqi Zhang")
+
+p
+```
+

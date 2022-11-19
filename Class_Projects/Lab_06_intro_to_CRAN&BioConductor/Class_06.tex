@@ -1,0 +1,509 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={LAB\_06},
+  pdfauthor={RUNQI ZHANG},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{LAB\_06}
+\author{RUNQI ZHANG}
+\date{}
+
+\begin{document}
+\maketitle
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, sharp corners, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, frame hidden, breakable, interior hidden]}{\end{tcolorbox}}\fi
+
+\renewcommand*\contentsname{Table of contents}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\hypertarget{example-input-vectors-to-start-with}{%
+\section{Example input vectors to start
+with}\label{example-input-vectors-to-start-with}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{student1 }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{100}\NormalTok{, }\DecValTok{100}\NormalTok{, }\DecValTok{100}\NormalTok{, }\DecValTok{100}\NormalTok{, }\DecValTok{100}\NormalTok{, }\DecValTok{100}\NormalTok{, }\DecValTok{100}\NormalTok{, }\DecValTok{90}\NormalTok{)}
+\NormalTok{student2 }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{100}\NormalTok{, }\ConstantTok{NA}\NormalTok{, }\DecValTok{90}\NormalTok{, }\DecValTok{90}\NormalTok{, }\DecValTok{90}\NormalTok{, }\DecValTok{90}\NormalTok{, }\DecValTok{97}\NormalTok{, }\DecValTok{80}\NormalTok{)}
+\NormalTok{student3 }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{90}\NormalTok{, }\ConstantTok{NA}\NormalTok{, }\ConstantTok{NA}\NormalTok{, }\ConstantTok{NA}\NormalTok{, }\ConstantTok{NA}\NormalTok{, }\ConstantTok{NA}\NormalTok{, }\ConstantTok{NA}\NormalTok{, }\ConstantTok{NA}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+``student\_homework'' import
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{student\_homework }\OtherTok{=} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"C:}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{Users}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{zhang}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{OneDrive}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{桌面}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{BIMM 143 {-} Bioinformatics Lab}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{Lab\_06}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{class\_06}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{student\_homework.csv"}\NormalTok{)}
+\FunctionTok{View}\NormalTok{(student\_homework)}
+\FunctionTok{nrow}\NormalTok{(student\_homework)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] 20
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ncol}\NormalTok{(student\_homework)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] 6
+\end{verbatim}
+
+\hypertarget{practice}{%
+\section{Practice}\label{practice}}
+
+package import
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(FSA)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## FSA v0.9.3. See citation('FSA') if used in publication.
+## Run fishR() for related website and fishR('IFAR') for related book.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+-- Attaching packages --------------------------------------- tidyverse 1.3.2 --
+\end{verbatim}
+
+\begin{verbatim}
+v ggplot2 3.3.6      v purrr   0.3.5 
+v tibble  3.1.8      v dplyr   1.0.10
+v tidyr   1.2.1      v stringr 1.4.1 
+v readr   2.1.3      v forcats 0.5.2 
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\FunctionTok{library}\NormalTok{(}\StringTok{"gridExtra"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+
+Attaching package: 'gridExtra'
+
+The following object is masked from 'package:dplyr':
+
+    combine
+\end{verbatim}
+
+replace NA with 0
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{student\_homework[}\FunctionTok{is.na}\NormalTok{(student\_homework)] }\OtherTok{\textless{}{-}} \DecValTok{0}
+\end{Highlighting}
+\end{Shaded}
+
+calculate the sum and min for each student
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{student\_min }\OtherTok{\textless{}{-}} \FunctionTok{apply}\NormalTok{(student\_homework[,}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{], }\DecValTok{1}\NormalTok{, min)}
+\NormalTok{student\_min}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+ [1] 73 64 69  0 75 77 74 76 77  0 66 70 76 76  0 74 63  0 68 68
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{student\_sum }\OtherTok{\textless{}{-}} \FunctionTok{apply}\NormalTok{(student\_homework[,}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{], }\DecValTok{1}\NormalTok{, sum)}
+\NormalTok{student\_sum}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+ [1] 440 394 406 337 428 433 450 451 428 316 410 437 445 427 315 432 415 378 399
+[20] 399
+\end{verbatim}
+
+\hypertarget{substract-the-total-score-by-their-lowest-score}{%
+\section{substract the total score by their lowest
+score}\label{substract-the-total-score-by-their-lowest-score}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{adjusted\_sum }\OtherTok{\textless{}{-}}\NormalTok{ student\_sum }\SpecialCharTok{{-}}\NormalTok{ student\_min}
+\NormalTok{adjusted\_sum}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+ [1] 367 330 337 337 353 356 376 375 351 316 344 367 369 351 315 358 352 378 331
+[20] 331
+\end{verbatim}
+
+\#Average = total/ \#assignment one col contains sutdent name, one col
+is disposed, \#remaining scores = ncol-2
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{student\_mean }\OtherTok{\textless{}{-}}\NormalTok{ adjusted\_sum}\SpecialCharTok{/}\NormalTok{(}\FunctionTok{ncol}\NormalTok{(student\_homework)}\SpecialCharTok{{-}}\DecValTok{2}\NormalTok{)}
+\NormalTok{student\_mean}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+ [1] 91.75 82.50 84.25 84.25 88.25 89.00 94.00 93.75 87.75 79.00 86.00 91.75
+[13] 92.25 87.75 78.75 89.50 88.00 94.50 82.75 82.75
+\end{verbatim}
+
+\#transpose col to row and append it to the original csv document
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{student\_mean }\OtherTok{\textless{}{-}} \FunctionTok{t}\NormalTok{(}\FunctionTok{t}\NormalTok{(student\_mean))}
+\FunctionTok{nrow}\NormalTok{(student\_mean)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] 20
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{student\_final }\OtherTok{\textless{}{-}} \FunctionTok{cbind}\NormalTok{(student\_homework, student\_mean)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{q1}{%
+\section{Q1:}\label{q1}}
+
+\textbf{\#integrate the codes above into a R function named grade()} 1.
+takes into a parameter, namely the gradebook 2. replace NA with 0 3.
+calculate the total and min for each student 4. calculate the adjusted
+score, substract total by min 5. calculate the final score (average),
+divide adjusted total by n-2
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{grade }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(grade\_raw) \{}
+\NormalTok{   grade\_raw[}\FunctionTok{is.na}\NormalTok{(grade\_raw)] }\OtherTok{\textless{}{-}} \DecValTok{0} \CommentTok{\#replace NA with numerical 0}
+   
+   \CommentTok{\#student\textquotesingle{}s sum subtracted by min, and transposed into rows}
+\NormalTok{   grade\_adjusted }\OtherTok{=} \FunctionTok{t}\NormalTok{( }\FunctionTok{t}\NormalTok{( }\FunctionTok{apply}\NormalTok{(grade\_raw[,}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{], }\DecValTok{1}\NormalTok{, sum) }\SpecialCharTok{{-}} \FunctionTok{apply}\NormalTok{(grade\_raw[,}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{], }\DecValTok{1}\NormalTok{, min) ) ) }
+   
+\NormalTok{   grade\_mean }\OtherTok{=}\NormalTok{ grade\_adjusted }\SpecialCharTok{/}\NormalTok{ (}\FunctionTok{ncol}\NormalTok{(grade\_raw)}\SpecialCharTok{{-}}\DecValTok{2}\NormalTok{) }\CommentTok{\#calculate the mean}
+\NormalTok{   grade\_final }\OtherTok{=} \FunctionTok{cbind}\NormalTok{(grade\_raw, grade\_mean) }\CommentTok{\#integrate the mean into a final document}
+   \FunctionTok{return}\NormalTok{(grade\_final) }
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\#test run
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{test\_doc}\OtherTok{=} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"C:}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{Users}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{zhang}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{OneDrive}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{桌面}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{BIMM 143 {-} Bioinformatics Lab}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{Lab\_06}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{class\_06}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{student\_homework.csv"}\NormalTok{)}
+\FunctionTok{grade}\NormalTok{(test\_doc)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+            X hw1 hw2 hw3 hw4 hw5 grade_mean
+1   student-1 100  73 100  88  79      91.75
+2   student-2  85  64  78  89  78      82.50
+3   student-3  83  69  77 100  77      84.25
+4   student-4  88   0  73 100  76      84.25
+5   student-5  88 100  75  86  79      88.25
+6   student-6  89  78 100  89  77      89.00
+7   student-7  89 100  74  87 100      94.00
+8   student-8  89 100  76  86 100      93.75
+9   student-9  86 100  77  88  77      87.75
+10 student-10  89  72  79   0  76      79.00
+11 student-11  82  66  78  84 100      86.00
+12 student-12 100  70  75  92 100      91.75
+13 student-13  89 100  76 100  80      92.25
+14 student-14  85 100  77  89  76      87.75
+15 student-15  85  65  76  89   0      78.75
+16 student-16  92 100  74  89  77      89.50
+17 student-17  88  63 100  86  78      88.00
+18 student-18  91   0 100  87 100      94.50
+19 student-19  91  68  75  86  79      82.75
+20 student-20  91  68  76  88  76      82.75
+\end{verbatim}
+
+\hypertarget{q2-using-your-grade-function-and-the-supplied-gradebook-who-is-the-top-scoring-student}{%
+\section{Q2: Using your grade() function and the supplied gradebook, Who
+is the top scoring
+student}\label{q2-using-your-grade-function-and-the-supplied-gradebook-who-is-the-top-scoring-student}}
+
+overall in the gradebook?
+
+\textbf{A2: student-18 is the top socring student with an final score of
+94.5}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{max}\NormalTok{(}\FunctionTok{grade}\NormalTok{(student\_homework)}\SpecialCharTok{$}\NormalTok{grade\_mean)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] 94.5
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{which.max}\NormalTok{(}\FunctionTok{grade}\NormalTok{(student\_homework)}\SpecialCharTok{$}\NormalTok{grade\_mean)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] 18
+\end{verbatim}
+
+\hypertarget{q3-from-your-analysis-of-the-gradebook-which-homework-was-toughest-on-students-i.e.-obtained-the-lowest-scores-overall}{%
+\section{Q3: From your analysis of the gradebook, which homework was
+toughest on students (i.e.~obtained the lowest scores
+overall?}\label{q3-from-your-analysis-of-the-gradebook-which-homework-was-toughest-on-students-i.e.-obtained-the-lowest-scores-overall}}
+
+\textbf{A3: homework\#2 is the toughest because it has the lowest
+average and the lowest median}
+
+\hypertarget{q4-from-your-analysis-of-the-gradebook-which-homework-was-most-predictive-of-overall-score-i.e.-highest-correlation-with-average-grade-score}{%
+\section{Q4: From your analysis of the gradebook, which homework was
+most predictive of overall score (i.e.~highest correlation with average
+grade
+score)?}\label{q4-from-your-analysis-of-the-gradebook-which-homework-was-most-predictive-of-overall-score-i.e.-highest-correlation-with-average-grade-score}}
+
+\textbf{A4: HW5 was most predictive of final score because it shows the
+higest correlation.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{student\_final }\OtherTok{=} \FunctionTok{grade}\NormalTok{(student\_homework)}
+\FunctionTok{cor}\NormalTok{(student\_final}\SpecialCharTok{$}\NormalTok{grade\_mean, student\_final[}\DecValTok{2}\SpecialCharTok{:}\DecValTok{6}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+           hw1      hw2       hw3       hw4       hw5
+[1,] 0.4250204 0.176778 0.3042561 0.3810884 0.6325982
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#alternatively}
+\FunctionTok{apply}\NormalTok{(student\_homework[,}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{], }\DecValTok{2}\NormalTok{, cor, }\AttributeTok{y=}\NormalTok{student\_final}\SpecialCharTok{$}\NormalTok{grade\_mean)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+      hw1       hw2       hw3       hw4       hw5 
+0.4250204 0.1767780 0.3042561 0.3810884 0.6325982 
+\end{verbatim}
+
+\hypertarget{q5-make-sure-you-save-your-quarto-document-and-can-click-the-render-or-rmarkdownknit-button-to-generate-a-pdf-foramt-report-without-errors.-finally-submit-your-pdf}{%
+\section{Q5: Make sure you save your Quarto document and can click the
+``Render'' (or Rmarkdown''Knit'') button to generate a PDF foramt report
+without errors. Finally, submit your
+PDF}\label{q5-make-sure-you-save-your-quarto-document-and-can-click-the-render-or-rmarkdownknit-button-to-generate-a-pdf-foramt-report-without-errors.-finally-submit-your-pdf}}
+
+to gradescope.
+
+
+
+\end{document}

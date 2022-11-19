@@ -1,0 +1,117 @@
+---
+title: "LAB_06"
+author: "RUNQI ZHANG"
+format: pdf
+toc: TRUE
+---
+
+# Example input vectors to start with
+```{r}
+student1 <- c(100, 100, 100, 100, 100, 100, 100, 90)
+student2 <- c(100, NA, 90, 90, 90, 90, 97, 80)
+student3 <- c(90, NA, NA, NA, NA, NA, NA, NA)
+```
+
+"student_homework" import
+```{r}
+student_homework = read.csv("C:\\Users\\zhang\\OneDrive\\桌面\\BIMM 143 - Bioinformatics Lab\\Lab_06\\class_06\\student_homework.csv")
+View(student_homework)
+nrow(student_homework)
+ncol(student_homework)
+```
+
+# Practice
+
+package import
+```{r}
+library(FSA)
+library(tidyverse)
+library(ggplot2)
+library("gridExtra")
+```
+
+replace NA with 0
+```{r}
+student_homework[is.na(student_homework)] <- 0
+```
+
+calculate the sum and min for each student
+```{r}
+student_min <- apply(student_homework[,-1], 1, min)
+student_min
+student_sum <- apply(student_homework[,-1], 1, sum)
+student_sum
+```
+# substract the total score by their lowest score
+```{r}
+adjusted_sum <- student_sum - student_min
+adjusted_sum
+```
+#Average = total/ #assignment
+one col contains sutdent name, one col is disposed, #remaining scores = ncol-2
+```{r}
+student_mean <- adjusted_sum/(ncol(student_homework)-2)
+student_mean
+```
+#transpose col to row and append it to the original csv document
+```{r}
+student_mean <- t(t(student_mean))
+nrow(student_mean)
+
+student_final <- cbind(student_homework, student_mean)
+```
+
+# Q1:
+**#integrate the codes above into a R function named grade()**
+1. takes into a parameter, namely the gradebook
+2. replace NA with 0
+3. calculate the total and min for each student
+4. calculate the adjusted score, substract total by min
+5. calculate the final score (average), divide adjusted total by n-2
+
+```{r}
+grade <- function(grade_raw) {
+   grade_raw[is.na(grade_raw)] <- 0 #replace NA with numerical 0
+   
+   #student's sum subtracted by min, and transposed into rows
+   grade_adjusted = t( t( apply(grade_raw[,-1], 1, sum) - apply(grade_raw[,-1], 1, min) ) ) 
+   
+   grade_mean = grade_adjusted / (ncol(grade_raw)-2) #calculate the mean
+   grade_final = cbind(grade_raw, grade_mean) #integrate the mean into a final document
+   return(grade_final) 
+}
+```
+
+#test run
+```{r}
+test_doc= read.csv("C:\\Users\\zhang\\OneDrive\\桌面\\BIMM 143 - Bioinformatics Lab\\Lab_06\\class_06\\student_homework.csv")
+grade(test_doc)
+```
+# Q2: Using your grade() function and the supplied gradebook, Who is the top scoring student
+overall in the gradebook?
+
+**A2: student-18 is the top socring student with an final score of 94.5**
+
+```{r}
+max(grade(student_homework)$grade_mean)
+which.max(grade(student_homework)$grade_mean)
+```
+
+# Q3: From your analysis of the gradebook, which homework was toughest on students (i.e. obtained the lowest scores overall?
+
+**A3: homework#2 is the toughest because it has the lowest average and the lowest median**
+
+
+# Q4: From your analysis of the gradebook, which homework was most predictive of overall score (i.e. highest correlation with average grade score)?
+
+**A4: HW5 was most predictive of final score because it shows the higest correlation.**
+```{r}
+student_final = grade(student_homework)
+cor(student_final$grade_mean, student_final[2:6])
+#alternatively
+apply(student_homework[,-1], 2, cor, y=student_final$grade_mean)
+```
+
+
+# Q5: Make sure you save your Quarto document and can click the “Render” (or Rmarkdown”Knit”) button to generate a PDF foramt report without errors. Finally, submit your PDF
+to gradescope.

@@ -1,0 +1,217 @@
+---
+title: "Class_07_Lab"
+author: "RUNQI ZHANG"
+format: pdf
+toc: TRUE
+---
+
+```{r}
+library(ggplot2)
+```
+
+
+# K-means clustering
+```{r}
+# generate some example data for clustering
+tmp<-c(rnorm(30,-3),rnorm(30,3))
+x<-cbind(tmp, rev(tmp))
+plot(x)
+```
+
+# apply kmeans()
+kmeans take two parameters - x and centers
+```{r}
+km <- kmeans(x, centers=2, nstart=20)
+km
+```
+> Q. How many points are in each cluster?
+
+```{r}
+km$size
+```
+
+> Q. What ‘component’ of your result object details 
+ - cluster size?
+ - cluster assignment/membership? 
+ - cluster center?
+ 
+```{r}
+km$cluster
+km$centers
+```
+
+> Q. Plot x colored by the kmeans cluster assignment and 
+ add cluster centers as blue point
+ 
+```{r}
+plot(x, col=km$cluster)
+points(km$centers, col="blue", pch=15, cex=2)
+```
+```{r}
+dist_matrix <- dist(x) 
+dim(dist_matrix)
+View( as.matrix(dist_matrix) )
+dim(x)
+dim( as.matrix(dist_matrix) )
+```
+
+
+# Hierarchical Clustering
+
+The 'hclust()' function requires an input distance matrix
+```{r}
+hc<-hclust(dist(x))
+plot(hc)
+```
+  use 'cutree()' to separate dendrogram to get the cluster membership vector
+  
+  cutree(hc, k, h) -> k:number of groups, h:height 
+```{r}
+cutree(hc, h=8)
+```
+  
+  cut into k groups
+```{r}
+grps <- cutree(hc,k=2)
+```
+A plot of our data colored by our hcluster groups
+```{r}
+plot(x, col=grps)
+```
+# PCA
+```{r}
+url <- "https://tinyurl.com/UK-foods"
+x <- read.csv(url)
+dim(x)
+head(x,6)
+```
+
+
+```{r}
+x<-read.csv(url, row.names=1)
+x
+```
+barplot
+```{r}
+barplot(as.matrix(x), beside=T, col=rainbow(nrow(x)))
+```
+histogram
+change besdie=T to F
+```{r}
+barplot(as.matrix(x), beside=F, col=rainbow(nrow(x)))
+```
+
+```{r}
+pairs(x, col=rainbow(10), pch=16)
+```
+A#5: The pairs() function compares the datasets across different conditions. If a point falls on the diagonal lines, it is compared with itself.
+
+A#6: People from N.Ireland comsume more whatever the sky-blue is representing and comsume less whatever the navy blue is representing as compared with people from other countries of UK.
+
+# PCA to the rescue
+```{r}
+# Use the prcomp() PCA function 
+pca <- prcomp( t(x) )
+pca
+summary(pca)
+```
+Plot PC1 vs PC2
+```{r}
+# Plot PC1 vs PC2
+plot(pca$x[,1], pca$x[,2], xlab="PC1", ylab="PC2", xlim=c(-270,500))
+text(pca$x[,1], pca$x[,2], colnames(x), col=c(1,2,3,4))
+```
+```{r}
+v <- round( pca$sdev^2/sum(pca$sdev^2) * 100 )
+v
+```
+```{r}
+z <- summary(pca)
+z$importance
+```
+ 
+```{r}
+par(mar=c(10, 3, 0.35, 0))
+barplot( pca$rotation[,1], las=2 )
+```
+```{r}
+biplot(pca)
+```
+
+# 2. PCA of RNA-seq data
+```{r}
+url2 <- "https://tinyurl.com/expression-CSV"
+rna.data <- read.csv(url2, row.names=1)
+head(rna.data)
+dim(rna.data)
+```
+A: 100 genes, 10 sampels
+
+```{r}
+## Again we have to take the transpose of our data 
+pca <- prcomp(t(rna.data), scale=TRUE)
+ 
+## Simple un polished plot of pc1 and pc2
+plot(pca$x[,1], pca$x[,2], xlab="PC1", ylab="PC2")
+```
+```{r}
+summary(pca)
+```
+```{r}
+plot(pca, main="Quick scree plot")
+```
+```{r}
+## Variance captured per PC 
+pca.var <- pca$sdev^2
+
+## Percent variance is often more informative to look at 
+pca.var.per <- round(pca.var/sum(pca.var)*100, 1)
+pca.var.per
+
+barplot(pca.var.per, main="Scree Plot", 
+        names.arg = paste0("PC", 1:10),
+        xlab="Principal Component", ylab="Percent Variation")
+```
+```{r}
+## A vector of colors for wt and ko samples
+colvec <- colnames(rna.data)
+colvec[grep("wt", colvec)] <- "red"
+colvec[grep("ko", colvec)] <- "blue"
+
+plot(pca$x[,1], pca$x[,2], col=colvec, pch=16,
+     xlab=paste0("PC1 (", pca.var.per[1], "%)"),
+     ylab=paste0("PC2 (", pca.var.per[2], "%)"))
+
+text(pca$x[,1], pca$x[,2], labels = colnames(rna.data), pos=c(rep(4,5), rep(2,5)))
+```
+
+# Using ggplot
+
+convert list to dataframe
+```{r}
+df <- as.data.frame(pca$x)
+
+# Our first basic plot
+ggplot(df) + 
+  aes(PC1, PC2) + 
+  geom_point()
+```
+
+```{r}
+df$samples <- colnames(rna.data)
+df$condition <- substr(colnames(rna.data),1,2)
+
+p <- ggplot(df) + 
+        aes(PC1, PC2, label=samples, col=condition) + 
+        geom_label(show.legend = FALSE)
+p
+```
+```{r}
+p + labs(title="PCA of RNASeq Data",
+       subtitle = "PC1 clealy seperates wild-type from knock-out samples",
+       x=paste0("PC1 (", pca.var.per[1], "%)"),
+       y=paste0("PC2 (", pca.var.per[2], "%)"),
+       caption="Class example data") +
+     theme_bw()
+```
+
