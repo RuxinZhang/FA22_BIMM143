@@ -13,7 +13,7 @@ class 05: [Introduction to ggplot](https://github.com/RuxinZhang/FA22_BIMM143/bl
 <br>
 class 06: [Introdution to CRAN & BioConductor](https://github.com/RuxinZhang/FA22_BIMM143/blob/main/Class_Projects/Lab_06_intro_to_CRAN%26BioConductor/Class_06.pdf)
 <br>
-class 07: [Clustering & PCA](https://github.com/RuxinZhang/FA22_BIMM143/tree/main/Class_Projects/Lab_07_clustering%26pca](https://github.com/RuxinZhang/FA22_BIMM143/blob/main/Class_Projects/Lab_07_clustering%26pca/Lab_07.pdf)
+class 07: [Clustering & PCA](https://github.com/RuxinZhang/FA22_BIMM143/blob/main/Class_Projects/Lab_07_clustering%26pca/Lab_07.pdf)
 <br>
 class 08: [Exploratory analysis](https://github.com/RuxinZhang/FA22_BIMM143/blob/main/Class_Projects/Lab_08_exploratory_analysis/Lab_08.pdf)
 <br>
