@@ -7,11 +7,11 @@ BIMM143, Prof. Grant Barry
 
 ## Index of material
 
-class 04: [Introduction to R] (https://github.com/RuxinZhang/FA22_BIMM143/blob/main/Class_Projects/Lab_04_intro_to_R/BIMM143_Lab4_Introduction_to_R.pdf)
+class 04: [Introduction to R](https://github.com/RuxinZhang/FA22_BIMM143/blob/main/Class_Projects/Lab_04_intro_to_R/BIMM143_Lab4_Introduction_to_R.pdf)
 <br>
-class 05: [Introduction to ggplot] (https://github.com/RuxinZhang/FA22_BIMM143/blob/main/Class_Projects/Lab_05_ggplot/class_05.pdf)
+class 05: [Introduction to ggplot](https://github.com/RuxinZhang/FA22_BIMM143/blob/main/Class_Projects/Lab_05_ggplot/class_05.pdf)
 <br>
-class 06: Introdution to CRAN & BioConductor [https://github.com/RuxinZhang/FA22_BIMM143/blob/main/Class_Projects/Lab_06_intro_to_CRAN%26BioConductor/Class_06.pdf)]
+class 06: [Introdution to CRAN & BioConductor](https://github.com/RuxinZhang/FA22_BIMM143/blob/main/Class_Projects/Lab_06_intro_to_CRAN%26BioConductor/Class_06.pdf)
 <br>
 class 07: Clustering & PCA [https://github.com/RuxinZhang/FA22_BIMM143/tree/main/Class_Projects/Lab_07_clustering%26pca]
 <br>
